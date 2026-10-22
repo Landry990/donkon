@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-cormorant);
+}
+
+body {
+  background: #f4efe8;
+  color: #1a1210;
+}
+
+.gallery-ground {
+  background-color: #f4efe8;
+  background-image:
+    radial-gradient(
+      ellipse at 50% 42%,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(244, 239, 232, 0) 58%
+    ),
+    linear-gradient(180deg, #f7f3ed 0%, #f4efe8 48%, #efe8df 100%);
+}
+
+.crystal-rule {
+  background: linear-gradient(
+    90deg,
+    rgba(179, 78, 53, 0) 0%,
+    #b34e35 18%,
+    #d48a72 50%,
+    #b34e35 82%,
+    rgba(179, 78, 53, 0) 100%
+  );
+}
+
+.crystal-name {
+  background-image: linear-gradient(
+    105deg,
+    #1a1210 0%,
+    #1a1210 38%,
+    #5c4338 46%,
+    #f3ebe4 50%,
+    #5c4338 54%,
+    #1a1210 62%,
+    #1a1210 100%
+  );
+  background-size: 240% 100%;
+  background-position: 100% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: crystal-sheen 11s ease-in-out infinite;
+}
+
+@keyframes crystal-sheen {
+  0%,
+  72% {
+    background-position: 100% 50%;
+  }
+  88%,
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crystal-name {
+    animation: none;
+    background-image: linear-gradient(
+      180deg,
+      #3a2a24 0%,
+      #1a1210 42%,
+      #0f0c0b 100%
+    );
+    background-size: 100% 100%;
+    background-position: 0 0;
+  }
+}
