@@ -5,7 +5,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#fcfcf9] flex flex-col font-serif text-[#1a1a1a]">
       
       {/* Header */}
-      <header className="flex justify-between items-center px-8 py-6 text-xs tracking-widest uppercase">
+      <header className="fixed top-0 w-full bg-[#fcfcf9]/90 backdrop-blur-sm z-50 flex justify-between items-center px-8 py-6 text-xs tracking-widest uppercase border-b border-[#e5e5e0]">
         <Link href="/" className="font-bold text-sm tracking-widest">
           DONKON
         </Link>
